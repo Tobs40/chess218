@@ -28,7 +28,7 @@ gp.setParam('Nodefilestart', 0.1)  # Start caching disk to tree in order to not 
 gp.setParam('PoolSolutions', 2_000_000_000)  # No reason to limit this
 gp.setParam('PoolSearchMode', 2)  # Systematically search the entire solutions space
 gp.setParam('PoolGap', 0.0)  # Only retain optimal solutions
-# gp.setParam('Cutoff', 218)  # Set this to the current record to speed up the search
+# gp.setParam('Cutoff', 218)  # Enter current record here to make things faster
 
 MOVES_MUST_BE_CAPTURES = False
 ALLOW_PROMOTIONS = True  # Whether you can have more than 1 queen, 2 knights, ...
@@ -715,6 +715,12 @@ def create_and_solve():
     for row in chessboard[::-1]:
         print(' '.join(row))
 
+    print('Writing found solutions to fen.txt')
+
+    with open(os.path.join(DIRECTORY, 'fen.txt'), 'w') as f:
+        for fe in sorted(fens):
+            f.write(fe+'\n')
+
     # fn = os.path.join(DIRECTORY, "{}.png".format('final.png'))
     # plot_chess_board(pieces_for_plotting, filename=fn)
     plot_chess_board(pieces_for_plotting)
@@ -723,11 +729,4 @@ def create_and_solve():
 
 
 if __name__ == "__main__":
-
     create_and_solve()
-
-    print('Writing found solutions to fen.txt')
-
-    with open(os.path.join(DIRECTORY, 'fen.txt'), 'w') as f:
-        for fe in sorted(fens):
-            f.write(fe+'\n')
