@@ -9,7 +9,7 @@ Does not check whether the position can be reached from the initial position. Th
 Usage:
 - Install gurobipy via pip
 - Install Gurobi on your system
-- Obtain and activate an academic license from https://www.gurobi.com/
+- Obtain and activate a free academic license from https://www.gurobi.com/
 - Make sure gurobipy finds Gurobi, this is usually the case
 - Modify the script according to your needs
 - Start running it and wait for the results
