@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Tobs40/chess218/assets/63099057/30f000d3-0ad6-45cf-92dd-059dc5b34ee6)
 
-A code snippet that, using the solver Gurobi, proves that there is no legal chess position with more than 218 moves.
+A code snippet that, using the solver Gurobi, proves, that there is no legal chess position with more than 218 moves.
 Can be configured to solve very similar problems (144 moves without promotions, with certain restrictions on piece counts, ...).
 Does not check whether the position can be reached from the initial position. There are tools for that: https://github.com/peterosterlund2/texel
 
