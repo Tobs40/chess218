@@ -7,12 +7,12 @@ Can be configured to solve very similar problems (144 moves without promotions, 
 Does not check whether the position can be reached from the initial position. There are tools for that: https://github.com/peterosterlund2/texel
 
 Usage:
--install gurobipy via pip
--install Gurobi on your system
--obtain and activate an academic license from https://www.gurobi.com/
--make sure gurobipy finds Gurobi, this is usually the case
--modify the script according to your needs
--run and wait.
+  -install gurobipy via pip
+  -install Gurobi on your system
+  -obtain and activate an academic license from https://www.gurobi.com/
+  -make sure gurobipy finds Gurobi, this is usually the case
+  -modify the script according to your needs
+  -run and wait.
 
 Solutions (Correct, illegal, wrong) will be written to a folder as images as well as text files with the corresponding fen.
 At the end of the program, after the popup window with the optimal solution is closed, a text file with the FENs of all correct solutions is created.
